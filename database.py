@@ -15,8 +15,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 if not DATABASE_URL:
     raise ValueError("DATABASE_URL не визначена в .env файлі")
 
-# Створюємо engine для підключення до бази даних
-# Neon потребує SSL-підключення, яке вже налаштовано в DATABASE_URL
+
 engine = create_engine(
     DATABASE_URL,
     echo=False  # Встановіть на True для див SQL запитів у консолі
